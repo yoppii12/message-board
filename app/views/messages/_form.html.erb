@@ -1,0 +1,33 @@
+<%= form_for(@message) do |f| %>
+    <% if @message.errors.present? %>
+    <div class="alert alert-danger">
+        <%= alert %>
+        <ul>
+            <% @message.errors.full_messages.each do |full_message| %>
+            <li>
+                <%= full_message %>
+            </li>
+            <% end %>
+        </ul>
+    </div>
+    <% end %>
+    
+        <div class="form-group">
+            <span class="label label-info"><%= f.label:"Name",{class:'col-sm-1'} %></span>
+            <div class="col-sm-11">
+                <%= f.text_field :name, :class=>'form-control', :size=>7 %>
+            </div>
+        </div>
+        <div class="form-group">
+            <span class="label label-info"><%= f.label :"Comment", {class:'col-sm-1'} %></span>
+            <div class="col-sm-11">
+                <%= f.text_area :body, :class=>'form-control', :cols=>20, :rows=>10 %>
+            </div>
+        </div>
+        <div class="col-sm-offset-1 col-sm-11">
+            <%= f.submit class:"btn btn-sm btn-info" %>
+        </div>
+        </div>
+    
+    
+    <% end %>
