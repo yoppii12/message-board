@@ -10,6 +10,11 @@
 <body>
   <nav class="navbar">
     <div class="container">
+      <% if notice %>
+        <div class="alert alert-info">
+          <%= notice %>
+        </div>
+      <% end %>
       <div class="navbar-header">
         <a class="navbar-brand" href="#">Message Board</a>
       </div>
