@@ -23,7 +23,7 @@
     </div>
 </div>
     
-    <%= form_for(Message.new) do |f| %>
+    <%= form_for(@message) do |f| %>
     <% if @message.errors.present? %>
     <div class="alert alert-danger">
         <%= alert %>
