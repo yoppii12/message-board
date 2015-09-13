@@ -1,3 +1,4 @@
+#フォームで送信ボタンを押すと/messageというURLにPOSTでパラメータが送信されその後、ここで設定したresourcesに記載されたアクションが呼ばれる
 Rails.application.routes.draw do
   root 'messages#index'
   resources :messages , except: [:index, :new]

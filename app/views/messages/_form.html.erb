@@ -1,4 +1,7 @@
+<% #投稿フォームを記述 %>
+
 <%= form_for(@message) do |f| %>
+    <% #エラーメッセージを表示するための部分 %>
     <% if @message.errors.present? %>
     <div class="alert alert-danger">
         <%= alert %>
@@ -12,10 +15,17 @@
     </div>
     <% end %>
     
+    <% #メッセージ投稿フォーム %>
         <div class="form-group">
             <%= f.label:Name,{class:'col-sm-1'} %>
             <div class="col-sm-11">
                 <%= f.text_field :name, :class=>'form-control', :size=>7 %>
+            </div>
+        </div>
+        <div class="form-group">
+            <%= f.label:Age,{class:'col-sm-1'} %>
+            <div class="col-sm-11">
+                <%= f.text_field :age, :class=>'form-control', :size=>7 %>
             </div>
         </div>
         <div class="form-group">
