@@ -1,6 +1,5 @@
 #フォームで入力されたパラメータを受け取りデータベースへ保存する
 class MessagesController < ApplicationController
-  #set_messageアクションを任意の処理（ここではedit,update）の前に実行できる
   before_action :set_message, only: [:edit, :update, :destroy]
   
   def index
@@ -9,7 +8,6 @@ class MessagesController < ApplicationController
     @message=Message.new
   end
   
-  #editアクション自体は空だが、実行時にset_message,edit.html.erbをレンダリング
   def edit
   end
   
